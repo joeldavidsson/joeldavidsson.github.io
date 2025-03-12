@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+  height: auto;
+  width: 100vw;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.NavigationBar {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 5vh;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      width: 10rem;
+      cursor: pointer;
+      padding: 1rem;
+    }
+
+    a {
+      color: #f5f5f5;
+      font-size: normal;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section h1 {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.timeline-card {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-card img {
+  width: auto;
+  height: 45%;
+  object-fit: cover;
+  position: relative;
+  bottom: 2rem;
+}
+
+.portrait-text-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 1rem;
+}
+
+.text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-info-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  left: 0;
+}
+
+.contact-info-container ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.contact-info-container li {
+  margin-right: 5.5rem;
+}
+
+.card {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+}
+
+/* about section */
+
+.about-card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.about-card-container h2 {
+  font-size: 3rem;
+  padding: 1rem;
+  background-color: #064e3b;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  width: 25%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+}
+
+.about-card ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.about-card li {
+  padding: 1rem;
+}
+
+.about-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #022c22;
+  margin-top: 2rem;
+}
+
+/* skills section */
+
+.skills-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.card-content ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.skills-card span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 80%;
+  height: 3rem;
+  font-weight: bold;
+  margin: 0.2rem;
+}
+
+.skills-card li {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.skills-card svg {
+  font-size: x-large;
+  margin-right: 1.5rem;
+}
+
+/* projects section */
+
+.projects-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-card {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #022c22;
+}
+
+.projects-card ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.projects-card span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: auto;
+  aspect-ratio: 1;
+  height: 75%;
+  font-weight: bold;
+  background-color: #064e3b;
+}
+
+.projects-card li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}

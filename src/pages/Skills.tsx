@@ -1,114 +1,81 @@
-import React from 'react';
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaAngular,
-  FaVuejs,
-  FaNodeJs,
-  FaDocker,
-  FaGitAlt,
-  FaWordpress,
-  FaDatabase,
-  FaSearch,
-} from 'react-icons/fa';
-import {
-  SiTypescript,
-  SiNextdotjs,
-  SiJquery,
-  SiMongodb,
-  SiPostgresql,
-  SiGraphql,
-} from 'react-icons/si';
-import { MdDesignServices } from 'react-icons/md';
-import { VscAzure } from 'react-icons/vsc';
-import { TbBrandCSharp, TbApi } from 'react-icons/tb';
-import { AiOutlineProject } from 'react-icons/ai';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { skills } from '../data/skillsData';
 
 const Skills = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  const groupedSkills = skills.reduce(
+    (acc, skill) => {
+      if (!acc[skill.category]) acc[skill.category] = [];
+      acc[skill.category].push(skill);
+      return acc;
+    },
+    {} as Record<string, typeof skills>,
+  );
+
+  const categories = ['All', ...Object.keys(groupedSkills)];
+
   return (
-    <section className='bg-orange-500'>
-      <div className='card'>
-        <h1 className='text-4xl'>Skills</h1>
-        <div className='card-content'>
-          <ul>
-            <li>
-              <FaHtml5 /> HTML
-            </li>
-            <li>
-              <FaCss3Alt /> CSS
-            </li>
-            <li>
-              <FaJs /> JavaScript
-            </li>
-            <li>
-              <SiTypescript /> TypeScript
-            </li>
-            <li>
-              <FaReact /> React
-            </li>
-            <li>
-              <FaAngular /> Angular
-            </li>
-            <li>
-              <FaVuejs /> Vue
-            </li>
-            <li>
-              <SiNextdotjs /> Next.js
-            </li>
-            <li>
-              <SiJquery /> jQuery
-            </li>
-            <li>
-              <FaNodeJs /> Node.js
-            </li>
-            <li>
-              <MdDesignServices /> UX / UI
-            </li>
-            <li>
-              <FaWordpress /> Wordpress
-            </li>
-            <li>
-              <TbBrandCSharp /> C#.NET
-            </li>
-            <li>
-              <FaDatabase /> SQL
-            </li>
-            <li>
-              <FaDocker /> Docker
-            </li>
-            <li>
-              <SiMongodb /> MongoDB
-            </li>
-            <li>
-              <SiPostgresql /> PostgreSQL
-            </li>
-            <li>
-              <TbApi /> REST API
-            </li>
-            <li>
-              <SiGraphql /> GraphQL
-            </li>
-            <li>
-              <AiOutlineProject /> Agile software development
-            </li>
-            <li>
-              <FaGitAlt /> Git
-            </li>
-            <li>
-              <VscAzure /> Azure DevOps
-            </li>
-            <li>
-              <FaSearch /> SEO
-            </li>
-            <li>
-              <AiOutlineProject /> Project management
-            </li>
-          </ul>
+    <div className='bg-[url(/images/codegreen.jpg)] bg-cover bg-bottom bg-no-repeat'>
+      <section className='bg-black bg-opacity-85 p-6 h-[95vh]'>
+        <h1 className='text-4xl text-white uppercase font-bold text-center'>
+          Skills
+        </h1>
+
+        <div className='flex justify-center flex-wrap gap-4 my-4'>
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`w-48 px-4 py-4 rounded-md text-white font-bold transition 
+              ${selectedCategory === category ? 'bg-emerald-900' : 'bg-emerald-950 hover:bg-emerald-700'}
+            `}
+            >
+              {category}
+            </button>
+          ))}
         </div>
-      </div>
-    </section>
+
+        <div className='skills-card'>
+          <div className='card-content'>
+            <AnimatePresence mode='sync'>
+              {Object.entries(groupedSkills)
+                .filter(
+                  ([category]) =>
+                    selectedCategory === 'All' || selectedCategory === category,
+                )
+                .map(([category, skills]) => (
+                  <motion.div
+                    key={category}
+                    initial={{ opacity: 0, x: 0 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, transition: { duration: 0 } }}
+                    transition={{ duration: 0.3, ease: 'easeIn' }}
+                    className='mb-4 w-1/5'
+                  >
+                    <h2 className='text-2xl text-white font-semibold mt-6 mb-4'>
+                      {category}
+                    </h2>
+                    <ul>
+                      {skills.map((skill, index) => (
+                        <span
+                          key={index}
+                          className='bg-[url(/images/codebg.jpg)] bg-cover bg-center bg-no-repeat flex items-center rounded-sm border-black border-y-4 hover:border-emerald-700 hover:scale-105 hover:ease-in-out transition'
+                        >
+                          <li className='bg-emerald-900 bg-opacity-95'>
+                            {skill.icon} {skill.name}
+                          </li>
+                        </span>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+            </AnimatePresence>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
