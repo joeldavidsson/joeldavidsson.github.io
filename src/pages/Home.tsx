@@ -1,31 +1,34 @@
 /* eslint-disable react/no-unescaped-entities */
-import Contact from './Contact';
+import Socials from '../components/Socials';
 
 const Home = () => {
   return (
-    <div className='bg-[url(/images/wave.jpg)] bg-cover bg-no-repeat bg-top'>
-      <div className='flex flex-row bg-[linear-gradient(to_right,rgba(6,78,59,0.4)_00%,rgba(0,0,0,1)_85%)] h-[100vh]'>
-        <div className='home-card '>
-          <div className='h-1/2 w-2/3'>
-            <div className='portrait-text-container'>
-              <h1 className='-ml-2 text-8xl uppercase font-bold tracking-[0.15em]'>
+    <div className='bg-[#344e41]/90'>
+      <section className='flex-row bg-black/50 md:justify-start h-[100vh]'>
+        <div className='home-card lg:flex-row'>
+          <div className='portrait-text-container lg:w-[50%] lg:items-end lg:pr-[4rem]'>
+            <span className='lg:text-start'>
+              <h2 className='lg:-ml-1 mb-[3rem] text-8xl uppercase tracking-[0.15em] font-semibold lg:text-start'>
                 Hello
-              </h1>
-              <h2 className='text-3xl tracking-wider mt-3'>
-                I'm Joel Davidsson
               </h2>
-              <h3 className='text-2xl mt-3 tracking-wider'>
-                Full Stack Developer
+              <h3 className='text-3xl tracking-wider lg:text-start'>
+                I'm Joel Davidsson
               </h3>
+              <h4 className='text-2xl mt-3 tracking-wider'>
+                Full Stack Developer
+              </h4>
               <h4 className='text-xl mt-3 tracking-widest'>Halmstad, Sweden</h4>
-              <Contact />
-            </div>
+              <Socials />
+            </span>
+          </div>
+
+          <div className='img-card w-1/2 lg:h-1/2 aspect-square flex lg:justify-start justify-center items-center lg:pl-[2rem]'>
+            <span className='rounded-full border-8 border-[#fefae0] lg:h-96 h-auto aspect-square bg-black flex justify-center items-center'>
+              <img src={'images/joel3.png'} alt='Joel' />
+            </span>
           </div>
         </div>
-        <div className='img-card h-full w-1/3 flex justify-center items-center'>
-          <img src={'images/joel3.png'} alt='Joel' />
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

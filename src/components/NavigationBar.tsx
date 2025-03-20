@@ -6,7 +6,7 @@ const NavigationBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 1) {
+      if (window.scrollY > 100) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -22,7 +22,7 @@ const NavigationBar = () => {
 
   return (
     <nav
-      className={`NavigationBar fixed top-0 transition-all duration-500 ease-in-out ${scroll ? 'bg-emerald-900' : 'bg-transparent'}`}
+      className={`NavigationBar fixed top-0 transition-all duration-500 ease-in-out ${scroll ? 'bg-[#344e41]' : 'bg-transparent'}`}
     >
       <ul>
         <li>
@@ -32,7 +32,7 @@ const NavigationBar = () => {
         </li>
         <li>
           <Link to='about' smooth={true} duration={500} offset={-40}>
-            About
+            About me
           </Link>
         </li>
         <li>

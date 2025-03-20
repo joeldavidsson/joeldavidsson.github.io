@@ -49,7 +49,7 @@ export const skills: Skill[] = [
   { icon: <MdDesignServices />, name: 'UX / UI', category: 'Frontend' },
 
   { icon: <FaNodeJs />, name: 'Node.js', category: 'Backend & API' },
-  { icon: <TbBrandCSharp />, name: 'C#.NET', category: 'Backend & API' },
+  { icon: <TbBrandCSharp />, name: 'C# .NET', category: 'Backend & API' },
   { icon: <TbApi />, name: 'REST API', category: 'Backend & API' },
   { icon: <SiGraphql />, name: 'GraphQL', category: 'Backend & API' },
 
@@ -65,6 +65,11 @@ export const skills: Skill[] = [
   {
     icon: <VscAzure />,
     name: 'Azure Cloud Development',
+    category: 'Databases & DevOps',
+  },
+  {
+    icon: <VscAzure />,
+    name: 'Azure DevOps',
     category: 'Databases & DevOps',
   },
 

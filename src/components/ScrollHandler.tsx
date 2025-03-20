@@ -4,9 +4,24 @@ import { animateScroll as scroll } from 'react-scroll';
 const ScrollHandler = () => {
   const [isScrollingDisabled, setIsScrollingDisabled] = useState(false);
   const [navHeight, setNavHeight] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1280);
 
   useEffect(() => {
-    // Hämta navigationbarens höjd
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1280);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isLargeScreen) return;
+
     const nav = document.querySelector('.NavigationBar');
     if (nav) {
       setNavHeight(nav.clientHeight);
@@ -15,16 +30,14 @@ const ScrollHandler = () => {
     const handleScroll = (event: WheelEvent) => {
       if (isScrollingDisabled) return;
 
-      event.preventDefault(); // Förhindra standard scroll
+      event.preventDefault();
       setIsScrollingDisabled(true);
 
-      const visibleHeight = window.innerHeight - navHeight; // Räkna bort navbar-höjden
+      const visibleHeight = window.innerHeight - navHeight;
 
       if (event.deltaY > 0) {
-        // Scrollar nedåt
         scroll.scrollMore(visibleHeight, { duration: 700 });
       } else {
-        // Scrollar uppåt
         scroll.scrollMore(-visibleHeight, { duration: 700 });
       }
 
@@ -38,7 +51,7 @@ const ScrollHandler = () => {
     return () => {
       window.removeEventListener('wheel', handleScroll);
     };
-  }, [isScrollingDisabled, navHeight]);
+  }, [isScrollingDisabled, navHeight, isLargeScreen]);
 
   return null;
 };
