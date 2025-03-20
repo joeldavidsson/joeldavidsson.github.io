@@ -14,7 +14,7 @@ const CvButton = () => {
   return (
     <button
       onClick={handleDownload}
-      className='bg-[#344e41] text-[#fefae0] px-6 py-3 rounded-md uppercase hover:bg-[#588157] transition'
+      className='bg-[#344e41] text-[#fefae0] px-6 py-3 rounded-md uppercase hover:bg-[#588157] transition cursor-pointer'
     >
       <h2 className='flex flex-row items-center'>
         <MdDownload className='mr-2 text-2xl' /> Download my resume

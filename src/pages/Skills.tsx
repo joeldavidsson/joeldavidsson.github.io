@@ -48,7 +48,7 @@ const Skills = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`w-48 px-4 py-2 rounded-md text-[#dad7cd] font-bold transition 
+                className={`cursor-pointer w-48 px-4 py-2 rounded-md text-[#dad7cd] font-bold transition 
                 ${selectedCategory === category ? 'bg-[#588157]' : 'bg-[#344E41] hover:bg-[#588157]'}`}
               >
                 {category}
