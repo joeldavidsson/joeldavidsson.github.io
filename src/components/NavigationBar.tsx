@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 const NavigationBar = () => {
   const [scroll, setScroll] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,33 +21,79 @@ const NavigationBar = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = () => {
+    if (window.innerWidth < 768) {
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <nav
-      className={`NavigationBar fixed top-0 transition-all duration-500 ease-in-out ${scroll ? 'bg-[#344e41]' : 'bg-transparent'}`}
+      className={`NavigationBar md:flex-row md:justify-center fixed top-0 transition-all duration-500 ease-in-out ${scroll ? 'bg-[#344e41]' : 'md:bg-transparent bg-[#344e41]'}`}
     >
-      <ul>
+      <div className='md:hidden w-full flex justify-end items-center pt-1 px-3'>
+        <button onClick={toggleMenu} className='text-[#fefae0] h-12 text-4xl'>
+          {menuOpen ? '✖' : '☰'}
+        </button>
+      </div>
+
+      <ul className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'}`}>
         <li>
-          <Link to='home' smooth={true} duration={500} offset={-200}>
+          <Link
+            to='home'
+            smooth={true}
+            duration={500}
+            offset={-200}
+            onClick={handleLinkClick}
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to='about' smooth={true} duration={500} offset={-40}>
+          <Link
+            to='about'
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={handleLinkClick}
+          >
             About me
           </Link>
         </li>
         <li>
-          <Link to='skills' smooth={true} duration={500} offset={-40}>
+          <Link
+            to='skills'
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={handleLinkClick}
+          >
             Abilities
           </Link>
         </li>
         <li>
-          <Link to='timeline' smooth={true} duration={500} offset={-40}>
+          <Link
+            to='timeline'
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={handleLinkClick}
+          >
             Timeline
           </Link>
         </li>
         <li>
-          <Link to='contact' smooth={true} duration={500} offset={-40}>
+          <Link
+            to='contact'
+            smooth={true}
+            duration={500}
+            offset={-40}
+            onClick={handleLinkClick}
+          >
             Contact
           </Link>
         </li>

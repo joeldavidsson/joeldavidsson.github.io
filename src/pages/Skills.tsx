@@ -84,7 +84,7 @@ const Skills = () => {
                       {skills.map((skill, index) => (
                         <span
                           key={index}
-                          className='flex items-center rounded-sm hover:scale-105 hover:ease-in-out duration-200'
+                          className='flex items-center rounded-xs hover:scale-105 hover:ease-in-out duration-200'
                         >
                           <li className='bg-black/5 hover:bg-[#344E41] border-t-2 border-[#344E41]'>
                             {skill.icon} {skill.name}
