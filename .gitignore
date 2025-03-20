@@ -9,7 +9,14 @@
 /coverage
 
 # production
-/build
+/dist
+
+# vite
+/.vite
+/vite-error.log
+
+#gh-pages
+/gh-pages
 
 # misc
 .DS_Store

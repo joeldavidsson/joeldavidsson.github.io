@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default ({ mode }) => {
   return defineConfig({
     plugins: [react(), eslint()],
+    base: '/joeldavidsson.github.io/',
     define: {
       'process.env.NODE_ENV': `"${mode}"`,
     },
