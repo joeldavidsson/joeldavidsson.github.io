@@ -22,7 +22,8 @@
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "jsx-quotes": ["error", "prefer-single"]
+    "jsx-quotes": ["error", "prefer-single"],
+    "linebreak-style": ["error", "unix"]
   },
   "settings": {
     "react": {
