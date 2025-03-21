@@ -2,7 +2,7 @@ import { MdDownload } from 'react-icons/md';
 
 const CvButton = () => {
   const handleDownload = () => {
-    const cvUrl = '/resume/JoelDavidssonResume.pdf';
+    const cvUrl = '/resume/JD-CV.pdf';
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'Joel Davidsson Resume.pdf';
