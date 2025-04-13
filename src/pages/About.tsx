@@ -6,7 +6,7 @@ import CvButton from '../components/CvButton';
 
 const About = () => {
   return (
-    <div className='bg-[#344e41]/90'>
+    <div className='bg-[#344e41]/70'>
       <section className='bg-black/50 lg:h-[95vh]'>
         <h1 className='text-4xl uppercase font-bold pt-6'>About me</h1>
         <div className='about-card-container lg:flex-row lg:h-[70%] xl:px-12'>

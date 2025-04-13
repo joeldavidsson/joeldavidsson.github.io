@@ -3,7 +3,7 @@ import { timelineEvents } from '../data/timelineData';
 
 const Timeline = () => {
   return (
-    <div className='bg-[#344e41]/90'>
+    <div className='bg-[#344e41]/70'>
       <section className='bg-black/50 xl:h-[95vh] h-full'>
         <div className='mb-6 xl:mb-0'>
           <h1 className='text-4xl text-center mt-12 text-[#fefae0] font-bold'>

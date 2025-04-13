@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Projects = () => {
   return (
-    <div className='bg-[#344e41]/90'>
+    <div className='bg-[#344e41]/70'>
       <section className='bg-black/50 h-[95vh]'>
         <h1 className='text-4xl uppercase font-bold text-center mb-4 mt-8'>
           Projects

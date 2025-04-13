@@ -35,7 +35,7 @@ const Skills = () => {
   const categories = ['All', ...Object.keys(groupedSkills)];
 
   return (
-    <div className='bg-[#344e41]/90'>
+    <div className='bg-[#344e41]/70'>
       <section className='bg-black/50 xl:h-[95vh] h-full'>
         <h1 className='text-4xl uppercase font-bold text-center pt-6'>
           Technical abilities

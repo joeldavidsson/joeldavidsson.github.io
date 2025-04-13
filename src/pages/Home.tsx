@@ -3,7 +3,7 @@ import Socials from '../components/Socials';
 
 const Home = () => {
   return (
-    <div className='bg-[#344e41]/90'>
+    <div className='bg-[#344e41]/70'>
       <section className='flex-row bg-black/50 md:justify-start h-[100vh]'>
         <div className='home-card lg:flex-row'>
           <div className='portrait-text-container lg:w-[50%] lg:items-end lg:pr-[4rem]'>

@@ -4,7 +4,7 @@ import { MdHome, MdMail, MdPerson, MdPhone } from 'react-icons/md';
 
 const Contact = () => {
   return (
-    <div className='bg-[#344e41]/90'>
+    <div className='bg-[#344e41]/70'>
       <section className='bg-black/50 h-[95vh]'>
         <h1 className='text-4xl uppercase font-bold pt-6'>Contact me</h1>
         <h3 className='text-center text-[#fefae0] px-4'>
