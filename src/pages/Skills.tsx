@@ -36,7 +36,7 @@ const Skills = () => {
 
   return (
     <div className='bg-[#344e41]/90'>
-      <section className='bg-black/50 h-[95vh]'>
+      <section className='bg-black/50 xl:h-[95vh] h-full'>
         <h1 className='text-4xl uppercase font-bold text-center pt-6'>
           Technical abilities
         </h1>
