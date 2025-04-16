@@ -5,7 +5,7 @@ const Socials = () => {
   return (
     <div className='contact-info-container'>
       <ul className='lg:gap-20 gap-8 flex lg:justify-start justify-center'>
-        <li>
+        <li className='hover:scale-120 transition-transform duration-300'>
           <a
             href='mailto:joeldavidsson7@hotmail.com'
             title='Send me an email'
@@ -14,7 +14,7 @@ const Socials = () => {
             <MdMail />
           </a>
         </li>
-        <li>
+        <li className='hover:scale-120 transition-transform duration-300'>
           <a
             href='https://www.linkedin.com/in/joeldavidsson/'
             title='Connect with me on LinkedIn'
@@ -22,7 +22,7 @@ const Socials = () => {
             <FaLinkedin />
           </a>
         </li>
-        <li>
+        <li className='hover:scale-120 transition-transform duration-300'>
           <a
             href='https://www.github.com/joeldavidsson'
             title='Visit my GitHub'

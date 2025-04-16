@@ -42,7 +42,7 @@ const NavigationBar = () => {
       </div>
 
       <ul className={`md:flex ${menuOpen ? 'flex flex-col' : 'hidden'}`}>
-        <li>
+        <li className='hover:scale-110 transition-transform duration-300'>
           <Link
             to='home'
             smooth={true}
@@ -53,7 +53,7 @@ const NavigationBar = () => {
             Home
           </Link>
         </li>
-        <li>
+        <li className='hover:scale-110 transition-transform duration-300'>
           <Link
             to='about'
             smooth={true}
@@ -64,7 +64,7 @@ const NavigationBar = () => {
             About me
           </Link>
         </li>
-        <li>
+        <li className='hover:scale-110 transition-transform duration-300'>
           <Link
             to='skills'
             smooth={true}
@@ -75,7 +75,7 @@ const NavigationBar = () => {
             Abilities
           </Link>
         </li>
-        <li>
+        <li className='hover:scale-110 transition-transform duration-300'>
           <Link
             to='timeline'
             smooth={true}
@@ -86,7 +86,7 @@ const NavigationBar = () => {
             Timeline
           </Link>
         </li>
-        <li>
+        <li className='hover:scale-110 transition-transform duration-300'>
           <Link
             to='contact'
             smooth={true}
