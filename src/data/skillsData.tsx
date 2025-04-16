@@ -12,6 +12,7 @@ import {
   FaWordpress,
   FaDatabase,
   FaSearch,
+  FaPython,
 } from 'react-icons/fa';
 import {
   SiTypescript,
@@ -50,6 +51,7 @@ export const skills: Skill[] = [
 
   { icon: <FaNodeJs />, name: 'Node.js', category: 'Backend & API' },
   { icon: <TbBrandCSharp />, name: 'C# .NET', category: 'Backend & API' },
+  { icon: <FaPython />, name: 'Python', category: 'Backend & API' },
   { icon: <TbApi />, name: 'REST API', category: 'Backend & API' },
   { icon: <SiGraphql />, name: 'GraphQL', category: 'Backend & API' },
 

@@ -36,6 +36,6 @@ export const timelineEvents: TimelineEvent[] = [
   {
     year: '2025',
     description:
-      'Graduated as a Frontend developer. Started studying "Cloud development in Azure" at IT-Högskolan while finding a workplace to start my new career journey.',
+      'Graduated as a Frontend developer. Studying "Cloud development in Azure" and "Python for AI-development" at IT-Högskolan while finding a workplace to start my new career journey.',
   },
 ];
