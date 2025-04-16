@@ -21,7 +21,7 @@ const Contact = () => {
                 <MdHome /> Halmstad, Sweden
               </li>
               <li>
-                <MdPhone /> +46735449702
+                <MdPhone /> +46736449702
               </li>
             </ul>
             <ul className='lg:flex-row flex-col'>
